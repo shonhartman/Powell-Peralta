@@ -1,0 +1,7 @@
+.hero {
+  width: 100%;
+  height: 200px;
+  background-image: url("../images/peralta-logo.png"), url("../images/top-image.png");
+  background-size: 225.5px 130.35px, 825px 508.2px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 40px 40px, -65px -60px; }

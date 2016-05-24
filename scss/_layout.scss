@@ -1,0 +1,41 @@
+
+.wrapper {
+  width: 100%;
+  height: $full-page-height + 100px;;
+  max-width: 1500px;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+    &:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    }
+}
+
+.container {
+  width: $container-width;
+  max-width: 530px;
+  height: $full-page-height;
+  margin: 0 auto;
+  // background-color: $slightly-transparent;
+  position: relative;
+  z-index: 1;
+
+    @media #{$information-tablet} {
+      transition: background-color, width 1.5s ease;
+      width: 100%;
+    }
+
+    @media #{$information-phone} {
+      height: 1200px;
+      transition: background-color, 1.5s ease;
+      background-color: $dark-text;
+    }
+  }

@@ -1,0 +1,134 @@
+.contact {
+  width: 100%;
+  height: $box-height;
+  background-color: $white;
+  margin-top: 20px;
+    @media #{$information-phone} {
+      position: absolute;
+      top: 790px;
+      width: 174px;
+      height: 225px;
+
+      @include translate-center;
+    }
+  p {
+    @media #{$information-phone} {
+      display: none;
+    }
+  }
+}
+
+.contact-left-column {
+  width: 50%;
+  margin: 0;
+  float: left;
+    @media #{$information-phone} {
+      float: none;
+      width: 100%;
+  }
+}
+
+form {
+  width: 50%;
+  height: $box-height;
+  float: left;
+    input {
+      display: inline-block;
+      width: 225px;
+      float: right;
+      margin: 5px;
+      box-shadow: inset .1px .1px $light-text;
+        @media #{$information-phone} {
+          width: 125px;
+          position: absolute;
+      }
+    }
+
+}
+
+input:first-of-type {
+    @media #{$information-phone} {
+      top: 40px;
+      right: 18px;
+  }
+}
+
+input:nth-of-type(2) {
+    @media #{$information-phone} {
+      top: 70px;
+      right: 18px;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  color: $light-text;
+  font-size: 6px;
+  padding-left: 5px;
+  padding-top: 0;
+}
+
+#form-message {
+  height: 75px;
+    @media #{$information-phone} {
+      top: 100px;
+      right: 18px;
+
+  }
+}
+
+#submit-button {
+  width: 85px;
+  font-size: 6px;
+  background-color: $accent;
+  text-transform: uppercase;
+  color: $white;
+  border: none;
+    @media #{$information-phone} {
+      right: 18px;
+      top: 190px;
+  }
+}
+
+//Social Icons ////////////////////////////////////////////
+
+@mixin social-box-footer {
+  width: 35px;
+  height: 35px;
+  margin-right: 2px;
+  float: left;
+  background-color: #777;
+    @media #{$information-phone} {
+      display: none;
+    }
+}
+
+@mixin social-icon {
+  padding: 10px 0 0 12px;
+  text-align: center;
+  color: $slightly-transparent;
+    @media #{$information-phone} {
+      display: none;
+    }
+}
+
+.facebook-footer {
+  @include social-box-footer;
+  margin-left: 10px;
+    .fa-facebook { @include social-icon ;}
+}
+
+.rss-footer {
+  @include social-box-footer;
+    .fa-rss { @include social-icon;}
+}
+
+.twitter-footer {
+  @include social-box-footer;
+    .fa-twitter { @include social-icon;}
+}
+
+.youtube-footer {
+  @include social-box-footer;
+    .fa-youtube { @include social-icon;}
+}

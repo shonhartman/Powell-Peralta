@@ -1,0 +1,47 @@
+.boards {
+  width: 100%;
+  height: $box-height;
+  background-color: $white;
+  margin-top: 15px;
+    @media #{$information-phone} {
+      position: absolute;
+      top: 605px;
+      width: 174px;
+      @include translate-center;
+    }
+
+
+}
+
+.boards img {
+  height: 150px;
+  padding: 13px 0 0 15px;
+  float: left;
+  @media #{$information-phone} {
+    display: none;
+    padding-left: 16px;
+    margin-top: -16px;
+  }
+
+}
+
+.boards li:first-child {
+  margin-left: -40px;
+    img {
+      @media #{$information-phone} {
+        display: block;
+      }
+    }
+}
+
+.boards li:last-child img {
+  @media #{$information-phone} {
+    display: block;
+  }
+}
+
+.boards li:nth-child(2) img {
+  @media #{$information-phone} {
+    display: block;
+  }
+}

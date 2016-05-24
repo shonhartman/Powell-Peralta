@@ -1,0 +1,23 @@
+//colors
+$accent: #B42930;
+$dark-text: #484846;
+$light-text: #D2D2D2;
+$white: #FEFEFE;
+$slightly-transparent: rgba(255, 255, 255, 0.5);
+
+//layout
+$full-page-height: 1000px;
+$container-width: 50%;
+$box-height: 175px;
+
+//size breaks
+$information-phone: "only screen and (max-width : 520px)";
+$information-tablet: "only screen and (max-width : 1065px)";
+
+//other
+$box-shadow: 0px 2px $slightly-transparent;
+
+@mixin translate-center {
+  left: 50%;
+  transform: translateX(-50%);
+}

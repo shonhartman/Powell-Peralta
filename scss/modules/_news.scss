@@ -1,0 +1,48 @@
+@mixin news-item {
+  background-color: $white;
+  position: absolute;
+  width: 175px;
+  height: 185px;
+    @media #{$information-phone} {
+      margin-top: 5px;
+      width: 174px;
+      @include translate-center;
+      top: 125px
+    }
+}
+
+.news-container {
+  width: 100%;
+  height: $full-page-height - 800px;
+  font-family: arial;
+  margin: 0 auto;
+  position: relative;
+    li:nth-child(1) {
+      @include news-item;
+      left: 0;
+        h3 {
+          margin-top: 20px;
+        }
+    }
+
+    li:nth-child(2) {
+      @include news-item;
+      left: 50%;
+      transform:translateX(-50%);
+        @media #{$information-phone} {
+          transition: display 0.5s ease;
+          display: none;
+        }
+    }
+
+    li:nth-child(3) {
+      @include news-item;
+      right: 0;
+        h3 {
+          margin-top: 35px;
+        }
+      @media #{$information-phone} {
+        display: none;
+      }
+    }
+}

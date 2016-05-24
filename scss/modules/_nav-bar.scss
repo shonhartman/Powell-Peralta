@@ -1,0 +1,160 @@
+.nav-bar {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  h3 {
+    text-transform: uppercase;
+    color: white;
+    font-size: .5rem;
+    font-weight: 100;
+    // background-color: $accent;
+    margin-top: 5px;
+      @media #{$information-tablet} {
+        transition: display 0.5s ease;
+        background-color: #333;
+      }
+      @media #{$information-phone} {
+        display: none;
+      }
+  }
+}
+
+
+//social icons -------------------------------------------------------
+
+h4 {
+  float: left;
+  padding-right: 5px;
+  color: $light-text;
+  text-transform: uppercase;
+  font-size: .25rem;
+}
+
+.social {
+  width: 275px;
+  height: 40px;
+  float: right;
+  margin-bottom: 10px;
+    @media #{$information-tablet} {
+      transition: display 0.5s ease;
+      display: none;
+    }
+}
+
+@mixin social-box {
+  width: 35px;
+  height: 35px;
+  float: right;
+  box-shadow: $box-shadow;
+}
+
+@mixin social-icon {
+  padding: 10px 0 0 12px;
+  text-align: center;
+  color: $slightly-transparent;
+}
+
+.facebook {
+  @include social-box;
+  background-color: #4169E1;
+    .fa-facebook { @include social-icon ;}
+}
+
+.rss {
+  @include social-box;
+  background-color: #d7b02d;
+  margin-right: 10px;
+    .fa-rss { @include social-icon;}
+}
+
+.twitter {
+  @include social-box;
+  background-color: #6699FF;
+  margin-right: 10px;
+    .fa-twitter { @include social-icon;}
+}
+
+.youtube {
+  @include social-box;
+  background-color: maroon;
+  margin-right: 10px;
+    .fa-youtube { @include social-icon;}
+}
+
+//nav-page-links -----------------------------------------------------------------
+
+
+.nav-page-links {
+  width: 100%;
+  height: 20px;
+  padding: 5px 0 0 1.25%;
+  clear: both;
+    @media #{$information-tablet} {
+      padding: 0;
+      margin: 0;
+      height: 3px;
+    }
+    @media #{$information-phone} {
+      display: none;
+    }
+}
+
+@mixin nav-box {
+  width: 125px;
+  height: 20px;
+  background-color: $accent;
+  text-align: center;
+  float: left;
+  position: absolute;
+  box-shadow: $box-shadow;
+    @media #{$information-tablet} {
+      transition: display 0.5s ease;
+      background-color: #333;
+      box-shadow: none;
+    }
+    @media #{$information-phone} {
+      display: none;
+    }
+}
+
+.sk8t-news {
+  @include nav-box;
+  left: 0;
+    @media #{$information-tablet} {
+      margin: 0;
+      width: 26%;
+    }
+}
+
+.skateboarders {
+  @include nav-box;
+  margin: 0 10px 0 10px;
+  left: 24.5%;
+  margin-left: 1%;
+    @media #{$information-tablet} {
+      margin: 0;
+      width: 26%;
+    }
+}
+
+.board-design {
+  @include nav-box;
+  right: 25.3%;
+  margin-left: 1%;
+    @media #{$information-tablet} {
+      margin: 0;
+      width: 26%;
+    }
+
+}
+
+.contact-us {
+  @include nav-box;
+  margin: 0 0 0 10px;
+  right: 0;
+    @media #{$information-tablet} {
+    margin: 0;
+    width: 26%;
+    }
+}
